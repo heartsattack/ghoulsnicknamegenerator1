@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="window">
+        <h1>Генератор ников для гулей</h1>
+        <h2>Цитаты Головача:</h2>
+        <img src="2.gif" class="gif2">
+        <button class="btn" onclick="displayBoth()">Сгенерировать</button>
+        <div class="result" id="nickResult"></div>
+        <div class="result" id="citateResult"></div>
+        <script>
+            const phrase1 = [
+                "anesthetic",
+        "numb",
+        "numbness",
+        "pulse flat",
+        "nerve dead",
+        "kill the pain",
+        "dull ache",
+        "no feeling",
+        "frozen vein",
+        "dead injection",
+        "withdrawal"
+    ];
+
+    const phrase2 = [
+        "玉pain玉",
+     "魂numb the pain魂",
+     "鬼hate me鬼",
+     "闇hollow闇",
+     "死1000-7死",
+     "血drain血",
+     "骨broken骨",
+    "虚empty inside虚",
+    "零zero pulse零",
+    "獄pudge abuzer獄", 
+    "呪hate me as you do呪",
+    "痛ache痛"
+];
+
+const phrase3 = [
+    "мне плевать на игру",
+    "я dead inside",
+    "мне похуй я дед инсайд",
+    "1000-7",
+    "пофиг на игру",
+    "ты в муте",
+    "нажал мув за тобой",
+    "го zxc если не позер",
+    "щас шмотки сломаю",
+    "zxcursed",
+    "zxc",
+    "пустота внутри",
+    "ноль эмоций",
+    "всё равно",
+    "уже всё равно",
+    "сгорел на ммо",
+    "фармил фармил а смысла нет",
+    "тильтую в пустоту",
+    "керри без души",
+    "саппорт без надежды",
+    "мид с пустыми глазами",
+    "оффлейн по жизни",
+    "вард на месте моего сердца",
+    "смок — единственный друг",
+    "билд: тоска + апатия",
+    "пикни пустоту, я уже внутри",
+    "пустота выбрана",
+    "тильт бесконечности",
+    "афк в реале",
+    "вышел из игры",
+    "анстакиллом по нервам",
+    "ганк на моё настроение",
+    "сижу в джунглях своих мыслей",
+    "фармлю крипов ради крипов",
+    "экспериенс? давно не качался",
+    "керри без керри",
+    "репортнул жизнь",
+    "моя душа в лобби ожидания",
+    "поиск матча — поиск смысла",
+    "ни одного смыла в этой дроче",
+    "my heart is on cooldown",
+    "респавн через 3 минуты",
+    "абузю пуджа без души",
+    "хук цепляет пустоту",
+    "флеш хилом по сердцу",
+    "2 pos or feed",
+    "1 pos or feed",
+    "puck abuzer",
+    "pudge abuzer",
+    "sf abuzer"
+];
+
+function randomChoice(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateNick() {
+    const part1 = randomChoice(phrase1);
+    const part2 = randomChoice(phrase2);
+    const part3 = randomChoice(phrase3);
+    
+    return part1 + " " + part2 + " " + part3;
+}
+function displayNick() {
+    const nick = generateNick();
+}
+
+
+
+const golovach = [
+    "Мне пиздец как плохо, я реально сейчас сдохну",
+    "Вы чмо ебаное, я вас в доту научу играть",
+    "Блять, ну как так можно играть, это пиздец",
+    "Ты серьезно? Ты серьезно это сделал? Ты даун?",
+    "Я ебал эту игру в рот",
+    "Сиди там в своей помойке, умник ебаный",
+    "Каждый раз одно и то же — чмошники бегают, стримснайпят",
+    "Да пошли вы все нахуй"
+];
+
+
+function generateCitate() {
+    return randomChoice(golovach);
+}
+function displayCitate(){
+    const citate = generateCitate();
+}
+
+console.log(generateCitate());
+;
+function displayBoth() {
+    const nick = generateNick();
+    const citate = generateCitate();
+    document.getElementById('nickResult').innerHTML = nick;
+    document.getElementById('citateResult').innerHTML = citate;
+}
+        </script>
+    </div>
+</body>
+</html>
